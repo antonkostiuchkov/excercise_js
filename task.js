@@ -29,18 +29,71 @@
 
 
 
-// Creational
+//////////////// Creational
 // use to create new objects with their own object scope
 // Binds 'this' to the new object scope
 // Returns 'this'
-// 1) Constructor pattern
 
-var ObjectName = function(param1, param2){
-    this.param1 = param1;
-    this.param2 = param2;
-    this.toString
+//////////////////////////
+// 1) Constructor pattern
+//////////////////////////
+
+// function ObjectName (param1, param2){
+//     this.param1 = param1;
+//     this.param2 = param2;
+//     this.toString = function () {
+//       return this.param1 + ' ' + this.param2;
+//     };
+// }
+// var x = new ObjectName(1,2);
+// console.log(x.toString());
+
+// var Task = function (name) {
+//   this.name = name;
+//   this.completed = false;
+
+//   this.complete = function () {
+//     console.log('Completing task ' + this.name);
+//     this.completed = true;
+//   };
+
+//   this.save = function () {
+//     console.log('Saving task ' + this.name);
+//   };
+// };
+
+// Creating a copy of Task object
+
+// var goSwim = new Task('Go to swimming pool');
+// console.log(goSwim.completed);
+// console.log(goSwim.name);
+// console.log(goSwim.complete());
+// console.log(goSwim.completed);
+// console.log(goSwim.save());
+
+
+////////////////////////////////////////
+// function toString is being recreated every time we copy Task object
+// Prototypes
+var Task = function (name) {
+  this.name = name;
+  this.completed = false;
 };
 
+Task.prototype.complete = function() {
+  console.log('Completing task ' + this.name);
+  this.completed = true;
+};
+Task.prototype.save = function() {
+  console.log('Saving task ' + this.name);
+};
+
+var task1 = new Task('run');
+var task2 = new Task('read');
+console.log(task1.completed);
+task1.complete();
+task1.save();
+console.log(task1.completed);
 // 2) Module pattern
 
 // 3) Factory ptrn
