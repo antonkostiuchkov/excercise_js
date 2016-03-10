@@ -34,9 +34,12 @@
 // Binds 'this' to the new object scope
 // Returns 'this'
 
+
+
 //////////////////////////
 // 1) Constructor pattern
 //////////////////////////
+// For creating several copies
 
 // function ObjectName (param1, param2){
 //     this.param1 = param1;
@@ -75,26 +78,51 @@
 ////////////////////////////////////////
 // function toString is being recreated every time we copy Task object
 // Prototypes
-var Task = function (name) {
-  this.name = name;
-  this.completed = false;
-};
+// var Task = function (name) {
+//   this.name = name;
+//   this.completed = false;
+// };
 
-Task.prototype.complete = function() {
-  console.log('Completing task ' + this.name);
-  this.completed = true;
-};
-Task.prototype.save = function() {
-  console.log('Saving task ' + this.name);
-};
+// Task.prototype.complete = function() {
+//   console.log('Completing task ' + this.name);
+//   this.completed = true;
+// };
+// Task.prototype.save = function() {
+//   console.log('Saving task ' + this.name);
+// };
 
-var task1 = new Task('run');
-var task2 = new Task('read');
-console.log(task1.completed);
-task1.complete();
-task1.save();
-console.log(task1.completed);
+// var task1 = new Task('run');
+// var task2 = new Task('read');
+// console.log(task1.completed);
+// task1.complete();
+// task1.save();
+// console.log(task1.completed);
+
+
+
+//////////////////////
 // 2) Module pattern
+//////////////////////
+// When you need only one of those
+
+
+var Module = function() {
+    var privateVar = 'I am private';
+
+    return {
+        method: function () {
+            console.log('method');
+        },
+        nextMethod: function () {
+            console.log('nextMethod');
+        }
+    };
+};
+
+var myModule = Module();
+myModule.nextMethod();
+
+
 
 // 3) Factory ptrn
 
