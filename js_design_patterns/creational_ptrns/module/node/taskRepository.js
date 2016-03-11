@@ -1,11 +1,9 @@
-var repo = function () {
-
-    var db = {};
+var Repo = function () {
 
     var get = function(id){
         console.log('Getting task ' + id);
         return {
-            name: 'new task from db'
+            name: 'New task from database'
         };
     };
 
@@ -13,11 +11,10 @@ var repo = function () {
         console.log('Saving ' + task.name + ' to the db');
     };
 
-    console.log('newing up task repo');
-
     return {
         get: get,
         save: save
     };
-
 };
+
+module.exports = Repo();

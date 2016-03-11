@@ -3,21 +3,24 @@ var repoFactory = function () {
     this.getRepo = function(repoType){
         if (repoType === 'task'){
             if (this.taskRepo) {
+                console.log("Retrieving form cache");
                 return this.taskRepo;
             } else {
-                this.taskRepo = require('./taskRepository')();
+                this.taskRepo = require('./taskRepository');
                 return this.taskRepo;
             }
         }
 
         if (repoType === 'user') {
-            var userRepo = require('./userRepository')();
+            var userRepo = require('./userRepository');
             return userRepo;
         }
         if (repoType === 'project') {
-            var projectRepo = require('./projectRepository')();
+            var projectRepo = require('./projectRepository');
             return projectRepo;
         }
     };
 
 };
+
+module.exports = new repoFactory;

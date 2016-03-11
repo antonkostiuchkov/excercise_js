@@ -4,16 +4,23 @@
   "description": "https://github.com/joeeames/webpackfundamentalscourse",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server -p"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
+    "css-loader": "^0.23.1",
     "node-libs-browser": "^0.5.3",
+    "node-sass": "^3.4.2",
+    "normalize.css": "^3.0.3",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.5.1",
     "webpack": "^1.12.9"
   }
 }
