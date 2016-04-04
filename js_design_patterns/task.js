@@ -61,20 +61,20 @@
 // Bad example - don't add methods to constructor funcs as they are being copied over and over
 // Instead use prototype. Employee is gonna get its own empty prototype objec
 
-var Employee = function (name, salary) {
-    this.name = name;
-    this.salary = salary;
-};
-Employee.prototype.giveRaise = function(money) {
-    this.salary += money;
-};
+// var Employee = function (name, salary) {
+//     this.name = name;
+//     this.salary = salary;
+// };
+// Employee.prototype.giveRaise = function(money) {
+//     this.salary += money;
+// };
 
-var e1 = new Employee('Anton', 200);
-var e2 = new Employee('Gosia', 204);
-console.log('Before raise', e1.salary);
-e1.giveRaise(4);
-console.log('After raise', e1.salary);
-console.log('Gosia\'s salary', e2.salary);
+// var e1 = new Employee('Anton', 200);
+// var e2 = new Employee('Gosia', 204);
+// console.log('Before raise', e1.salary);
+// e1.giveRaise(4);
+// console.log('After raise', e1.salary);
+// console.log('Gosia\'s salary', e2.salary);
 
 
 
@@ -174,6 +174,10 @@ console.log('Gosia\'s salary', e2.salary);
 // They either extend functionality or simplify functionality
 
 // 1) Decorator
+// Wraps an object
+// Protects existing obj
+// Allows extended functionality
+
 
 // 2) Facade
 

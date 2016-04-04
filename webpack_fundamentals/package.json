@@ -2,7 +2,7 @@
   "name": "webpack_fundamentals",
   "version": "1.0.0",
   "description": "https://github.com/joeeames/webpackfundamentalscourse",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server -p"
   },
