@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-app="taskManager">
+    <h1>Task manager</h1>
+    <div ng-controller="taskCtrl as ctrl">
+        <div ng-repeat="task in ctrl.tasks">
+            <input type="checkbox" ng-checked="task.completed" ng-click="task.completeTask($index)">
+            {{task.name}}
+        </div>
+    </div>
+
+    <script src="angular.min.js"></script>
+    <script src="script.js"></script>
+    <script src="task.js"></script>
+    <script src="taskRepo.js"></script>
+</body>
+</html>
