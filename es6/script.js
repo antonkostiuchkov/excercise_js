@@ -194,4 +194,14 @@
 // }
 // showCat(123, 'search', 'advertising');
 
+// Spread
+// var prices = [12, 20, 18];
+// var maxPrice = Math.max(...prices);
+// console.log(maxPrice);
+
+// var prices = [12, 20, 18];
+// var newPriceArray = [...prices];
+// console.log(newPriceArray);
+
+
 

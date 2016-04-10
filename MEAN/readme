@@ -1,0 +1,9 @@
+ 1. D:\!Soft\MongoDB\bin\mongod.exe
+ 2. Next tab: D:\!Soft\MongoDB\bin\mongo.exe
+ 3. use 'db name'
+
+ Mongo cli commands:
+ use ...
+ show collections
+ db.meetups.insert({ name: 'Mean SF deves' })
+ db.meetups.find()

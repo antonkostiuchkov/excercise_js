@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-app="meetupManager">
+    <h1>Meetups manager</h1>
+
+    <div ng-controller="meetupCtrl as ctrl">
+
+        <h4>There are {{ ctrl.meetups.length }} meetups</h4>
+        <ul>
+            <li ng-repeat="meetup in ctrl.meetups">{{meetup.name}}</li>
+        </ul>
+
+        <div>
+            <input type="text" placeholder="Meetup name" ng-model="ctrl.meetupName">
+            <button type="submit" ng-click="ctrl.createMeetup()">Add</button>
+        </div>
+
+
+    </div>
+
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-resource.min.js"></script>
+    <script src="/js/module.js"></script>
+    <script src="/js/controller.js"></script>
+</body>
+</html>
