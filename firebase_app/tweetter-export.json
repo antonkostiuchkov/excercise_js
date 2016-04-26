@@ -1,0 +1,48 @@
+{
+  "users": [{
+    "name": "Anton",
+    "email": "antkos@mail.com",
+    "following": {
+      "Alex": true,
+      "Gosia": true
+    },
+    "username": "antkos"
+  }, {
+    "name": "Gosia",
+    "email": "gosia@mail.com",
+    "following": {
+      "Alex": true,
+      "Anton": true
+    },
+    "username": "gosia.f"
+  }, {
+    "name": "Alex",
+    "email": "alex@mail.com",
+    "following": {
+      "Anton": true,
+      "Gosia": false
+    },
+    "username": "alexu"
+  }],
+  "tweets": [
+    {
+      "username": "antkos",
+      "text": "Hello from Anton"
+    }, {
+      "username": "antkos",
+      "text": "I'm cleaning"
+    }, {
+      "username": "gosia.f",
+      "text": "Hello from Gosia"
+    }, {
+      "username": "gosia.f",
+      "text": "I'm cleaning"
+    }, {
+      "username": "alexu",
+      "text": "Hello from Alex"
+    }, {
+      "username": "alexu",
+      "text": "I'm doing nothing"
+    }
+  ]
+}
