@@ -1,0 +1,25 @@
+<div>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Length</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="movie in movieList.movies">
+            <td>{{movie.title}}</td>
+            <td>{{movie.length}}</td>
+            <td>
+                <movie-rating value="movie.rating"></movie-rating>
+            </td>
+            <td>
+                <div>
+                    <button ng-click="movieList.upRating(movie)">Increase</button>
+                </div>
+                <div>
+                    <button ng-click="movieList.downRating(movie)">Decrease</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
