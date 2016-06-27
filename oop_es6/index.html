@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>OOP ES6</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="node_modules/material-design-lite/dist/material.css">
+
     <script src="node_modules/traceur/bin/traceur.js" charset="utf-8"></script>
-    <script src="node_modules/es6-module-loader/dist/es6-module-loader-dev.js" charset="utf-8"></script>
+    <script src="node_modules/systemjs/dist/system.js" charset="utf-8"></script>
+    <script src="node_modules/material-design-lite/dist/material.js" charset="utf-8"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3w2Safofs1ky9YgTEebPAYbV7pbwZalI&callback=googleMapsCallback"
+    async defer></script>
 </head>
 <body>
-    <h1>Hello world!!!!!</h1>
-
 
     <script>
-        System.import('src/app.js');
+        function googleMapsCallback() {
+            System.paths['jquery'] = './node_modules/jquery/dist/jquery.js'
+            System.import('src/app.js');
+        }
     </script>
 </body>
 </html>

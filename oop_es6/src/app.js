@@ -1,30 +1,22 @@
-class Drone {
-    constructor(id, name) {
-        this._id = id;
-        this.name = name;
-    }
+import $ from 'jquery';
+import {fleet} from './fleet-data.js';
+import {FleetDataService} from  './services/fleet-data-service.js';
+import {ApplicationBase} from  './framework/application-base.js';
+import {HomePage} from  './pages/home-page.js';
 
-    fly() {
-        console.log("Drone " + this.id + " is flying");
+export class App extends ApplicationBase {
+    constructor() {
+        super('Fleet Manager');
+        this.dataService = new FleetDataService();
+        this.dataService.loadData(fleet);
 
-    }
-
-    static getCompany() {
-        console.log("in getCompany");
-
-    }
-
-    get id() {
-        return this._id
-    }
-
-    set id(value) {
-        this._id = value 
+        this.addRoute('Home', new HomePage(), true);
+        this.addRoute('Cars', null);
+        this.addRoute('Drones', null);
+        this.addRoute('Map', null);
     }
 }
 
-let drone = new Drone(123, 'Flyer');
-let drone2 = new Drone(321, 'Twirl');
 
-drone.fly();
-console.log(drone.id + ': ' + drone.name);
+export let application = new App();
+application.show($('body'));
