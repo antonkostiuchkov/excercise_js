@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "yolo": "git add --all && git commit -am \"$(date)\" && npm version minor && git push origin master --tags"
   },
   "repository": {
     "type": "git",
