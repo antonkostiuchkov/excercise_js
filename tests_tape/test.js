@@ -1,6 +1,7 @@
 var Bear = require('./index.js')
 var addClass = require('./className.js')
 var test  = require('tape')
+console.log('test', test);
 
 test('should growl', function (assert) {
     var bear = new Bear()
